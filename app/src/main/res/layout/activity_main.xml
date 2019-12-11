@@ -10,6 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ar_fragment"
-        android:name="com.example.arcoreapplication.CustomARFragment"/>
+        android:name="com.google.ar.sceneform.ux.ArFragment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cube"
+            android:text="Cube"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shpere"
+            android:text="Sphere"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cylinder"
+            android:text="Cylinder"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
