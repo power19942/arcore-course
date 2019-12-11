@@ -44,11 +44,3 @@ dependencies {
 
 
 apply plugin: 'com.google.ar.sceneform.plugin'
-
-
-
-
-sceneform.asset('sampledata/ArcticFox_Posed.obj',
-        'default',
-        'sampledata/ArcticFox_Posed.sfa',
-        'src/main/assets/ArcticFox_Posed')
