@@ -18,15 +18,35 @@ import com.google.ar.sceneform.ux.TransformableNode
 class MainActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onUpdate(frameTime: FrameTime) {
         var frame = arFragment.arSceneView.arFrame
         var images = frame?.getUpdatedTrackables(AugmentedImage::class.java)
 
         for (image in images!!){
             if (image.trackingState == TrackingState.TRACKING){
-
+                if (image.name == "fox"){
+                    var anchor =image.createAnchor(image.centerPose)
+                    createModel(anchor)
+                }
             }
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    private fun createModel(anchor: Anchor){
+        ModelRenderable.builder()
+            .setSource(this@MainActivity,Uri.parse("ArcticFox_Posed.sfb"))
+            .build()
+            .thenAccept {
+                placeModel(it,anchor)
+            }
+    }
+
+    private fun placeModel(model: ModelRenderable?, anchor: Anchor) {
+        var node = AnchorNode(anchor)
+        node.renderable = model
+        arFragment.arSceneView.scene.addChild(node)
     }
 
     lateinit var arFragment: CustomARFragment
