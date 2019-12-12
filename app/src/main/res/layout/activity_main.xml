@@ -10,31 +10,48 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ar_fragment"
-        android:name="com.google.ar.sceneform.ux.ArFragment"/>
+        android:name="com.example.arcoreapplication.CustomArFragment"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="8dp"
+        android:text="Balloones left: 20"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/balloones_txt"
+        android:layout_alignParentRight="true" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cube"
-            android:text="Cube"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0:0"
+        android:textSize="32sp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/timer_txt"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/shpere"
-            android:text="Sphere"/>
+    <View
+        android:layout_width="72dp"
+        android:layout_height="4dp"
+        android:background="#7a000000"
+        android:layout_centerInParent="true"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cylinder"
-            android:text="Cylinder"/>
 
-    </LinearLayout>
+    <View
+        android:layout_width="4dp"
+        android:layout_height="72dp"
+        android:background="#7a000000"
+        android:layout_centerInParent="true"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoot_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="Shoot"/>
 </RelativeLayout>
