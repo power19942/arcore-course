@@ -52,3 +52,8 @@ sceneform.asset('sampledata/ArcticFox_Posed.obj',
         'default',
         'sampledata/ArcticFox_Posed.sfa',
         'src/main/assets/ArcticFox_Posed')
+
+sceneform.asset('sampledata/video_screen.obj',
+        'sampledata/material.mat',
+        'sampledata/video_screen.sfa',
+        'src/main/assets/video_screen')
